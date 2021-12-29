@@ -22,7 +22,7 @@ RUN cd ~ \
     && ~/.meteor/meteor npm ci --production \
     && METEOR_DISABLE_OPTIMISTIC_CACHING=1  ~/.meteor/meteor build --architecture os.linux.x86_64 --directory ~/app \
     && rm -rf ~/source
-
+COPY --chown=meteor virtual-backgrounds ~/app/bundle/programs/web.browser/app/resources/images/virtual-backgrounds
 RUN cd ~/app/bundle/programs/server \
     && npm install --production
     

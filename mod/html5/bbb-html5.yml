@@ -15,6 +15,9 @@ public:
     startClosed: {{ .Env.CHAT_START_CLOSED }}
   note:
     url: https://{{ .Env.DOMAIN }}/pad
+  virtualBackgrounds:
+    fileNames:
+      - bigbigtutor.jpg
 private:
   app:
     host: 0.0.0.0
